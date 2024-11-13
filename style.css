@@ -1,0 +1,82 @@
+/* Estilos para a imagem e título no centro, abaixo da imagem */
+.header {
+    position: absolute;
+    top: 60%; /* Distância do topo para que fiquem abaixo da imagem */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    display: flex;
+    flex-direction: column; /* Faz o título ficar abaixo da imagem */
+    align-items: center; /* Centraliza o conteúdo no eixo horizontal */
+    z-index: 100; /* Para garantir que o cabeçalho esteja acima dos outros elementos */
+}
+
+/* Imagem com bordas arredondadas */
+.header-image {
+    width: 50px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: auto;
+    border-radius: 15px; /* Borda arredondada na imagem */
+    margin-bottom: 10px; /* Espaçamento entre a imagem e o título */
+}
+
+/* Título abaixo da imagem */
+.header-title {
+    font-size: 1.8em;
+    color: #FF6600; /* Cor laranja conforme o código */
+    margin: 100px;
+}
+
+/* Contêiner para centralizar a imagem que "cai" */
+.falling-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black; /* Fundo preto */
+}
+
+/* Estilos e animação para a imagem */
+.falling-image {
+    width: 500px; /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    filter: drop-shadow(0 0 20px orange);
+    opacity: 0;
+    transform: translateY(-100%);
+    animation: fallIn 2s ease-out forwards;
+}
+
+/* Animação de queda */
+@keyframes fallIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para o menu em cascata */
+.cascading-menu {
+    position: absolute;
+    top: 60px; /* Ajuste a distância do topo para colocar o menu acima da imagem */
+    width: 100%;
+    text-align: center;
+    z-index: 50; /* Coloca o menu abaixo do cabeçalho */
+}
+
+.cascading-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cascading-menu li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.cascading-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.cascading-menu a:hover {
+    color: orange;
+}

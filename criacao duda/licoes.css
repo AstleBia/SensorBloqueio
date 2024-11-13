@@ -51,5 +51,59 @@
 
 .titulo-pagina {
     text-align: center;
-    line-height: 290px;
+    line-height: 400px;
+}
+
+.topico-1 {
+    position: absolute;
+    top: 290px;
+    left: 60px;
+}
+
+.topico-2 {
+    position: absolute;
+    top: 440px;
+    left: 60px;
+}
+
+.topico-3{
+    position: absolute;
+    top: 565px;
+    left: 60px;
+}
+
+.resposta-tp-1-1 {
+    position: absolute;
+    top: 340px;
+    left: 60px;
+}
+
+.resposta-tp-1-2 {
+    position: absolute;
+    top: 370px;
+    left: 60px;
+}
+
+.resposta-tp-2 {
+    position: absolute;
+    top: 490px;
+    left: 60px;
+}
+
+.resposta-tp-3-1 {
+    position: absolute;
+    top: 615px;
+    left: 60px;
+}
+
+.resposta-tp-3-2 {
+    position: absolute;
+    top: 645px; /*Terminei aqui!*/
+    left: 60px;
+}
+
+.resposta-tp-3-3 {
+    position: absolute;
+    top: 675px;
+    left: 60px;
 }

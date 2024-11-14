@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problemas enfrentados e lições aprendidas</title>
+    <link rel="stylesheet" href="componentes.css">
+
+    <style>
+
+        body {
+            background-color: black;
+        }
+
+        h2, p {
+
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!--Parte CABEÇALHO (obrigatório em todos os arquivos)-->
+    <!--1: Nova Seção para a imagem e o título no canto superior esquerdo -->
+    <div class="header">
+        <img
+          src="/imagens/cesar.png"
+          alt="Imagem de Sensor"
+          class="header-image"
+        />
+    </div>
+
+    <!--2: Navegação que aparece em cascata -->
+    <nav class="cascading-menu">
+        <ul>
+          <li><a href="/projeto.html">Projeto</a></li>
+          <li><a href="/autores.html">Autores</a></li>
+          <li><a href="/tutorial.html">Passo a Passo</a></li>
+          <li><a href="/codigo.html">Código</a></li>
+          <li><a href="../criacao duda/licoes.html">Problemas e Lições Aprendidas</a></li>
+          <li><a href="/index.html">Home</a></li>
+        </ul>
+    </nav>
+
+<!--Parte do Código sobre Componentes e Suprimentos-->  
+
+<h1 class="titulo-pagina" style="font-size: 1.8em; color: #FF6600;"><b>Componentes e Suplementos</b></h1>
+
+<main>
+
+<div class="box-arduino">
+    <h2 class="comp-arduino">Arduino Uno</h2>   
+    <p>O Arduino Uno é o microcontrolador central do projeto. Ele processa os dados recebidos do sensor ultrassônico, interpreta as informações e toma decisões. Nesse caso, ele está programado para verificar a distância medida pelo sensor e, se o usuário se afastar além de uma distância específica, o Arduino envia um sinal ao computador para deslogar o usuário. A programação para esse comportamento é carregada no Arduino Uno, que controla toda a lógica de funcionamento do dispositivo.</p>
+    <img src="../imagens/arduinofoto.webp" alt="foto-arduino" class="foto-arduino">
+</div>
+
+
+    <h2>Sensor Ultrassônicos</h2>
+    <p>O sensor ultrassônico mede a distância entre o usuário e o dispositivo. Ele emite ondas ultrassônicas que se refletem no corpo do usuário, retornando ao sensor, que calcula o tempo que as ondas levam para ir e voltar. Com base nesse tempo, o Arduino consegue calcular a distância entre o dispositivo e o usuário. Se a distância ultrapassar um limite pré-definido, o Arduino identifica que o usuário se afastou e inicia o processo de deslogar o Windows.</p>
+    <img src="../imagens/sensorfoto.png" alt="foto-sensor">
+
+    <h2>Resistores</h2>
+    <p>Os resistores são usados para proteger os componentes eletrônicos de picos de corrente e para garantir o funcionamento adequado do circuito. Eles limitam a quantidade de corrente que passa pelo sensor e pelo Arduino, prevenindo possíveis danos causados por correntes excessivas. Geralmente, os resistores são necessários em circuitos onde os sinais digitais precisam ser controlados ou onde a alimentação precisa ser ajustada para não sobrecarregar os componentes.</p>
+    <img src="../imagens/fotoresistores.webp" alt="foto-resistores">
+
+    <h2>Cabos de Conexão</h2>
+    <p>Os cabos de conexão fazem a ligação física entre os componentes, como entre o sensor ultrassônico e o Arduino, e o Arduino e o computador (via USB ou outro método de conexão). Esses cabos são responsáveis por transmitir os sinais elétricos que permitem o funcionamento integrado do dispositivo. Cada cabo específico ajuda a estabelecer as conexões de alimentação (GND e VCC) e os sinais de entrada e saída (por exemplo, os sinais de medição do sensor).</p>
+    <img src="../imagens/fotocabos.webp" alt="foto-cabos">
+            
+</main>
+
+</body>
+</html>

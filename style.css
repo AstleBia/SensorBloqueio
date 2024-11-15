@@ -1,82 +1,97 @@
-/* Estilos para a imagem e título no centro, abaixo da imagem */
+/* Estilo global para manter consistência */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: 'Arial', sans-serif;
+    color: white;
+}
+
+/* Cabeçalho adaptado para "lições aprendidas" */
 .header {
-    position: absolute;
-    top: 60%; /* Distância do topo para que fiquem abaixo da imagem */
-    left: 50%;
-    transform: translateX(-50%); /* Centraliza horizontalmente */
-    display: flex;
-    flex-direction: column; /* Faz o título ficar abaixo da imagem */
-    align-items: center; /* Centraliza o conteúdo no eixo horizontal */
-    z-index: 100; /* Para garantir que o cabeçalho esteja acima dos outros elementos */
-}
-
-/* Imagem com bordas arredondadas */
-.header-image {
-    width: 50px; /* Ajuste o tamanho da imagem conforme necessário */
-    height: auto;
-    border-radius: 15px; /* Borda arredondada na imagem */
-    margin-bottom: 10px; /* Espaçamento entre a imagem e o título */
-}
-
-/* Título abaixo da imagem */
-.header-title {
-    font-size: 1.8em;
-    color: #FF6600; /* Cor laranja conforme o código */
-    margin: 100px;
-}
-
-/* Contêiner para centralizar a imagem que "cai" */
-.falling-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: black; /* Fundo preto */
-}
-
-/* Estilos e animação para a imagem */
-.falling-image {
-    width: 500px; /* Ajuste o tamanho conforme necessário */
-    height: auto;
-    filter: drop-shadow(0 0 20px orange);
-    opacity: 0;
-    transform: translateY(-100%);
-    animation: fallIn 2s ease-out forwards;
-}
-
-/* Animação de queda */
-@keyframes fallIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Estilos para o menu em cascata */
-.cascading-menu {
-    position: absolute;
-    top: 60px; /* Ajuste a distância do topo para colocar o menu acima da imagem */
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    text-align: center;
-    z-index: 50; /* Coloca o menu abaixo do cabeçalho */
+    background-color: black;
+    padding: 10px 20px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: 60px;
 }
 
+.header-logo img {
+    height: 50px;
+    width: auto;
+}
+
+/* Menu em cascata reutilizado com ajustes */
 .cascading-menu ul {
     list-style: none;
+    display: flex;
+    margin: 0;
     padding: 0;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .cascading-menu li {
-    display: inline;
-    margin: 0 15px;
+    margin-right: 20px;
 }
 
 .cascading-menu a {
     color: white;
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 0.9rem;
+    font-family: 'Arial Rounded MT Bold', sans-serif;
+    margin-left: 20px;
 }
 
 .cascading-menu a:hover {
-    color: orange;
+    color: #FF6600;
+}
+
+/* Título da página */
+.titulo-pagina {
+    text-align: center;
+    margin-top: 100px;
+    font-size: 1.8em;
+    color: #FF6600;
+}
+
+/* Estilos para tópicos e respostas */
+.topico-1, .topico-2, .topico-3 {
+    margin: 20px 40px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.resposta-tp-1-1, .resposta-tp-1-2,
+.resposta-tp-2,
+.resposta-tp-3-1, .resposta-tp-3-2, .resposta-tp-3-3 {
+    margin: 10px 60px;
+    font-size: 1em;
+}
+
+/* Adaptações para espaçamento e responsividade */
+@media (max-width: 768px) {
+    .titulo-pagina {
+        font-size: 1.5em;
+    }
+
+    .topico-1, .topico-2, .topico-3 {
+        font-size: 1em;
+        margin: 10px 20px;
+    }
+
+    .resposta-tp-1-1, .resposta-tp-1-2,
+    .resposta-tp-2,
+    .resposta-tp-3-1, .resposta-tp-3-2, .resposta-tp-3-3 {
+        font-size: 0.9em;
+        margin: 5px 20px;
+    }
 }
